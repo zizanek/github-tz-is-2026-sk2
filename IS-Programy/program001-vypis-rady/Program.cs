@@ -51,10 +51,24 @@ while(again.ToLower() == "a" )
     }
 
 
+    // Rekapitulace zadaných hodnot
+    Console.WriteLine();
+    Console.WriteLine("==================================");
+    // Výpis zadaných hodnot pod sebou
+    // Console.WriteLine($"První číslo: {first}");
+    // Console.WriteLine($"Poslední číslo: {last}");
+    // Console.WriteLine($"Diference (krok): {step}");
+    
+    // Výpis zadaných hodnot do jednoho řádku
+    Console.WriteLine($"První číslo: {first}; Poslední číslo: {last}; Diference (krok): {step}");
+    Console.WriteLine("==================================");
+    Console.WriteLine();
+
+
     // Dotaz směrem k uživateli na opakování
     Console.WriteLine();
     Console.WriteLine();
-    Console.WriteLine("Pro opakování programu stislněte klávesu a. Následně potvrďte klávesou Enter. ");
+    Console.WriteLine("Pro opakování programu stiskněte klávesu a. Následně potvrďte klávesou Enter. ");
     Console.WriteLine("Jakokouli jinou klávesou program ukončíte.");
     Console.WriteLine();
     Console.Write("Chcete program spustit znovu? ");
