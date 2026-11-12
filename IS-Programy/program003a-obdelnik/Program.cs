@@ -41,8 +41,21 @@ while(again.ToLower() == "a" )
     Console.WriteLine("==================================");
     Console.WriteLine();
 
-    // Jádro konkrétního algortimu 
-    
+    // Jádro konkrétního algortimu
+
+    // Vnější cyklus, který bude řídit správný počet zobrazených řádků (výška) 
+    for(int i = 1; i <= height ; i++)
+    {
+        // Vnitřní cyklus se stará o to, aby se v každém řádku vykreslil správný počet znaků (šířka krát)
+        for(int j = 1; j <= width; j++)
+        {
+            Console.Write("* ");
+            System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(100));    
+        }
+        
+        Console.WriteLine();
+        
+    }
 
     // Konec jádra konkrétního algoritmu
 
