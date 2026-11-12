@@ -46,6 +46,18 @@ while(again.ToLower() == "a" )
     // Vnější cyklus, který bude řídit správný počet zobrazených řádků (výška) 
     for(int i = 1; i <= height ; i++)
     {
+        if(i % 2 == 0)
+        {
+            // sudý řádek
+            Console.ForegroundColor = ConsoleColor.Yellow;
+        }
+        else
+        {
+            // lichý řádek
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+        }
+        
+        
         // Vnitřní cyklus se stará o to, aby se v každém řádku vykreslil správný počet znaků (šířka krát)
         for(int j = 1; j <= width; j++)
         {
@@ -56,6 +68,7 @@ while(again.ToLower() == "a" )
         Console.WriteLine();
         
     }
+    Console.ResetColor();
 
     // Konec jádra konkrétního algoritmu
 
