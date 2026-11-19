@@ -54,15 +54,56 @@ while(again.ToLower() == "a" )
     Random myRandNumb = new Random();
     // Random myRandNumb = new Random(50); // Pevný seed pro testovací účely (vždy stejná čísla)
 
+    int negativeNumbs = 0;
+    int positiveNumbs = 0;
+    int zeros = 0;
+
+    int evenNumbs = 0;
+    int oddNumbs = 0;
+
+
     Console.WriteLine("Generovaná čísla: ");
     for(int i = 0; i < myRandNumbs.Length; i++ )
     {
         // Generování i-tého náhodného čísla
         myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound+1);
         Console.Write($"{myRandNumbs[i]}; ");
+
+        /* if(myRandNumbs[i] < 0)
+            negativeNumbs++;
+        if(myRandNumbs[i] > 0)
+            positiveNumbs++;
+        if(myRandNumbs[i] == 0)
+            zeros++;*/
+
+        // kladná, záporná nebo nuly
+        if(myRandNumbs[i] < 0)
+           negativeNumbs++;
+        else if(myRandNumbs[i] > 0)
+            positiveNumbs++;
+        else
+            zeros++;
+
+        // sudá a lichá čísla
+        if(myRandNumbs[i] % 2 == 0)
+            evenNumbs++;
+        else
+            oddNumbs++;                      
+
+
     }
 
 
+    Console.WriteLine();
+    Console.WriteLine("==================================");
+    Console.WriteLine($"Počet záporných čísel: {negativeNumbs}");
+    Console.WriteLine($"Počet kladných čísel: {positiveNumbs}");
+    Console.WriteLine($"Počet nul: {zeros}");
+    Console.WriteLine("==================================");
+    Console.WriteLine($"Počet sudých čísel: {evenNumbs}");
+    Console.WriteLine($"Počet lichých čísel: {oddNumbs}");
+    Console.WriteLine("==================================");
+    Console.WriteLine();
 
 
 
