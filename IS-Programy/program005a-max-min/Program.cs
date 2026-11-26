@@ -45,7 +45,7 @@ while(again.ToLower() == "a" )
     Console.WriteLine("==================================");
     Console.WriteLine();
 
-    // Jádro konkrétního algortimu 
+    
     
     // Deklarace pole a alokace v paměti
     int[] myRandNumbs = new int[n];
@@ -63,6 +63,8 @@ while(again.ToLower() == "a" )
     }
 
 
+    // Jádro konkrétního algortimu 
+    
 
 
 
