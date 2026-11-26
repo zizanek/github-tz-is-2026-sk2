@@ -64,7 +64,41 @@ while(again.ToLower() == "a" )
 
 
     // Jádro konkrétního algortimu 
+
+    // Hledání maxima, minima a jejich umístění
+    int max = myRandNumbs[0]; // Předpokládáme, že nultý prvek v poli je maximem
+    int min = myRandNumbs[0]; // Předpokládáme, že nultý prvek v poli je minimem
+    int posMax = 0;
+    int posMin = 0;
+
+    for(int i = 1; i < n; i++)
+    {
+        if(myRandNumbs[i] > max)
+        {
+            max = myRandNumbs[i];
+            posMax = i;     
+        }
+
+        if(myRandNumbs[i] < min)
+        {
+            min = myRandNumbs[i];
+            posMin = i;
+        }
+    }
+
+    Console.WriteLine();
+    Console.WriteLine("==============================================");
+    Console.WriteLine($"Maximum: {max}");
+    Console.WriteLine($"Pozice prvního maxima: {posMax}");
+    Console.WriteLine($"Minimum: {min}");
+    Console.WriteLine($"Pozice prvního minima: {posMin}");
+    Console.WriteLine("==============================================");
+    Console.WriteLine();
+
     
+
+  
+
 
 
 
