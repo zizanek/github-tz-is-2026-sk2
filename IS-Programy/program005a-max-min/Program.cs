@@ -95,11 +95,58 @@ while(again.ToLower() == "a" )
     Console.WriteLine("==============================================");
     Console.WriteLine();
 
+    if (max >= 3)
+    {
+        // Vnější cyklus řídí vykreslování jednotlivých řádků
+        for(int i = 0; i < max; i++) {
+            // Budeme vykreslovat
+            int spaces = 0;
+            int stars = 0;
+
+            if(i < max / 2)
+            {
+                spaces = i;
+                stars = max  - (2 * i);
+            }
+            else 
+            {
+                // TO-DO - samostatně
+                // určit mezery
+                // určit hvězdičky
+                // bude nutné u hvězdiček řešit zda je max liché nebo sudé
+                
+            }
+
+            // Vykreslení úvodních mezer
+            for(int sp = 0; sp < spaces; sp++)
+            {
+                Console.Write(" ");
+            }
+
+
+            // Vykreslení hvězdiček
+            for(int st = 0; st < stars; st++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+
+       
+        }
+        
+
+    }
+    else
+    {
+        // Nebudeme vykreslovat
+        Console.WriteLine("Maximum je menší než 3 => obrazec se nevykreslí");
+    }
     
 
   
 
-
+  
 
 
     // Konec jádra konkrétního algoritmu
